@@ -1136,10 +1136,10 @@ button {
 
 	/* This sets the content of the actual background */
 	#bg:after {
-		-moz-transform: scale(0.75);
-		-webkit-transform: scale(0.75);
-		-ms-transform: scale(0.75);
-		transform: scale(0.75);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-ms-transform: scale(2);
+		transform: scale(2);
 		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
