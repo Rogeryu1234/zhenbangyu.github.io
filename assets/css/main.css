@@ -1093,10 +1093,10 @@ button {
 
 /* This changes what the background of your site looks like */
 #bg {
-	-moz-transform: scale(0.8);
-	-webkit-transform: scale(0.8);
-	-ms-transform: scale(0.8);
-	transform: scale(0.8);
+	-moz-transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
 	-webkit-backface-visibility: hidden;
 	position: fixed;
 	top: 0;
