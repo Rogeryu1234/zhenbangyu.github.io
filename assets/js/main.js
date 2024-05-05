@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 // Show more, show less
 document.addEventListener("DOMContentLoaded", function() {
     // Get all project titles
@@ -23,8 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Ensure the description is initially displayed
-        title.nextElementSibling.style.display = "block";
+        // Ensure the description is initially hidden and show more text
+        var description = title.nextElementSibling;
+        description.style.display = "none";
+        title.querySelector(".expand-icon").textContent = "Show More";
     });
 });
 
