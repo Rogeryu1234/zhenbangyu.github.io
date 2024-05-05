@@ -169,6 +169,19 @@ input, select, textarea {
     }
 }
 
+.class-list-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute items evenly along the main axis with equal space between them */
+}
+
+.class-list {
+    width: 45%; /* Adjust width as needed */
+    border: 1px solid #ccc; /* Add border for visualization */
+    padding: 10px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+}
+
+
 
 
 
