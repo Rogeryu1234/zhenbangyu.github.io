@@ -4,6 +4,31 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Show more, show less
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all project titles
+    var projectTitles = document.querySelectorAll(".project-title");
+
+    // Add click event listener to each project title
+    projectTitles.forEach(function(title) {
+        title.addEventListener("click", function() {
+            // Toggle the visibility of the project description
+            var description = this.nextElementSibling;
+            if (description.style.display === "none") {
+                description.style.display = "block";
+                this.querySelector(".expand-icon").textContent = "Show Less";
+            } else {
+                description.style.display = "none";
+                this.querySelector(".expand-icon").textContent = "Show More";
+            }
+        });
+
+        // Ensure the description is initially displayed
+        title.nextElementSibling.style.display = "block";
+    });
+});
+
+
 (function($) {
 
 	var	$window = $(window),

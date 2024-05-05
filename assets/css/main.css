@@ -73,6 +73,103 @@ input, select, textarea {
 	appearance: none;
 }
 
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+/* Update the styles for the timeline line */
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    width: 6px; /* Adjust thickness as needed */
+    height: 80%; /* Adjust height of the timeline as needed */
+    background: #333; /* Adjust color as needed */
+    left: 0%;
+    transform: translateX(-50%);
+    top: 5%; /* Adjust top position to center the timeline vertically */
+}
+
+
+/* Add nodes to the timeline line */
+.timeline-item:after {
+    content: '';
+    position: absolute;
+    width: 12px; /* Adjust size as needed */
+    height: 12px; /* Adjust size as needed */
+    background: #333; /* Adjust color as needed */
+    border-radius: 50%;
+    left: 0%;
+    transform: translate(-50%, -6px); /* Adjust vertical position as needed */
+    z-index: 1; /* Ensure nodes appear above the timeline line */
+}
+/* Style the nodes with different colors */
+.timeline-item:nth-child(even):after {
+    background: #00bfff; /* Adjust color as needed */
+}
+.timeline-item:nth-child(odd):after {
+    background: #d715a6; /* Adjust color as needed */
+}
+.timeline-content {
+    margin-left: 30px;
+}
+
+.timeline-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.project-description {
+    display: none;
+}
+
+.expand-icon {
+    cursor: pointer;
+    color: #777;
+    font-size: 14px;
+}
+
+.expand-icon:hover {
+    color: #333;
+}
+
+/* Adjust styles as needed */
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+    justify-content: space-between; /* Adjust alignment as needed */
+    align-items: center; /* Adjust alignment as needed */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    width: 200px; /* Adjust width as needed */
+}
+
+/* Media query for smaller screens (e.g., cell phones) */
+@media screen and (max-width: 600px) {
+    .image-container img {
+        width: 100%; /* Make images take full width of container on smaller screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+}
+
+
+
+
 @-ms-viewport {
 	width: device-width;
 }
@@ -1532,7 +1629,8 @@ button {
 		transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 		padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
 		position: relative;
-		width: 40rem;
+		/* Width */
+		width: 60rem;
 		max-width: 100%;
 		background-color: rgba(27, 31, 34, 0.85);
 		border-radius: 4px;
