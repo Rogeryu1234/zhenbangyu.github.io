@@ -6,32 +6,6 @@
 
 
 // initially display nothing.
-document.addEventListener("DOMContentLoaded", function() {
-    // Get all project titles
-    var projectTitles = document.querySelectorAll(".project-title");
-
-    // Add click event listener to each project title
-    projectTitles.forEach(function(title) {
-        title.addEventListener("click", function() {
-            // Toggle the visibility of the project description
-            var description = this.nextElementSibling;
-            if (description.style.display === "none") {
-                description.style.display = "block";
-                this.querySelector(".expand-icon").textContent = "Show Less";
-            } else {
-                description.style.display = "none";
-                this.querySelector(".expand-icon").textContent = "Show More";
-            }
-        });
-
-        // Ensure the description is initially hidden and show more text
-        var description = title.nextElementSibling;
-        description.style.display = "none";
-        title.querySelector(".expand-icon").textContent = "Show More";
-    });
-});
-
-// initially display everything.
 // document.addEventListener("DOMContentLoaded", function() {
 //     // Get all project titles
 //     var projectTitles = document.querySelectorAll(".project-title");
@@ -50,10 +24,36 @@ document.addEventListener("DOMContentLoaded", function() {
 //             }
 //         });
 
-//         // Ensure the description is initially displayed
-//         title.nextElementSibling.style.display = "block";
+//         // Ensure the description is initially hidden and show more text
+//         var description = title.nextElementSibling;
+//         description.style.display = "none";
+//         title.querySelector(".expand-icon").textContent = "Show More";
 //     });
 // });
+
+// initially display everything.
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all project titles
+    var projectTitles = document.querySelectorAll(".project-title");
+
+    // Add click event listener to each project title
+    projectTitles.forEach(function(title) {
+        title.addEventListener("click", function() {
+            // Toggle the visibility of the project description
+            var description = this.nextElementSibling;
+            if (description.style.display === "none") {
+                description.style.display = "block";
+                this.querySelector(".expand-icon").textContent = "Show Less";
+            } else {
+                description.style.display = "none";
+                this.querySelector(".expand-icon").textContent = "Show More";
+            }
+        });
+
+        // Ensure the description is initially displayed
+        title.nextElementSibling.style.display = "block";
+    });
+});
 
 
 
